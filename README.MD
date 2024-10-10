@@ -1,5 +1,5 @@
 PRZYKLADOWY CONFIG DODATKOWEGO MAGAZYNKA
-Mags = {
+```Mags = {
     Types = {
         ["mag_pistol"] = {
             ammoRequired = 'ammo-pistol',
@@ -11,7 +11,7 @@ Mags = {
         }
     
     }
-}
+}```
 
 
 POWYZSZY CONFIG TYCZY SIĘ PLIKU CONFIG.LUA W SKRYPCIE WE_MAGS
@@ -22,20 +22,20 @@ odszukujesz dany typ broni przykladowo weapon_assaultrifle, oraz dopisujesz nazw
     magName = 'mag_rifle'
 
 PRZYKLAD 
-['WEAPON_ASSAULTRIFLE'] = {
+```['WEAPON_ASSAULTRIFLE'] = {
 	label = 'Assault Rifle',
 	weight = 4500,
 	durability = 0.03,
     magName = 'mag_rifle'
 	ammoname = 'ammo-rifle2',
-},
+},```
 
 magName w pliku ox_inventory musi korespondowac do nazwy magazynku w pliku config.lua w skrypcie we_mags, inaczej nic nie zadziała!!!!!
 
 
 
 ox_inventory
-reloadWeapon = function(slot, clipammo)
+```reloadWeapon = function(slot, clipammo)
 		print(slot,clipammo.. ' reloading')
 		local ammoInCurrWeapon = GetAmmoInPedWeapon(playerPed, currentWeapon.hash)
 		local maxAmmoInClip = GetMaxAmmoInClip(playerPed, currentWeapon.hash, true)
@@ -96,3 +96,4 @@ reloadWeapon = function(slot, clipammo)
 
 		end
 	})
+```
